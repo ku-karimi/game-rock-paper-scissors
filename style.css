@@ -120,6 +120,67 @@ body{
 
 #resultDiv{
     display: none;
+    justify-content: space-evenly;
+    width: 70%;
+    margin: auto;
+    color: snow;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+#resultDiv img{
+    background-color: snow;
+    padding: 10px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+#you{
+    box-shadow: 2px 7px 0px 3px #123524;
+    border: 14px solid #3E7B27;
+}
+
+#but{
+    box-shadow: 2px 7px 0px 3px #659287;
+    border: 14px solid #78B3CE;
+}
+
+#resultDiv button{
+    background-color: snow;
+    padding: 17px;
+    width: 180px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    border: none;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+}
+
+#rulsDiv{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#rulsDiv img{
+    z-index: 2;
+    width: 400px;
+    padding: 14px;
+    margin-bottom: -680px;
+    margin-top: 10px;
+    border-radius: 17px;
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    -ms-border-radius: 17px;
+    -o-border-radius: 17px;
 }
 
 @media screen and (max-width: 1100px) {
@@ -144,3 +205,4 @@ body{
         left: 100px;
     }
 }
+
