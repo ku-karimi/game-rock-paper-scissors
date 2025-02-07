@@ -18,26 +18,24 @@
         </div>
         <div id="score">
             <p>SCORE</p>
-            <p id="scoreNumber">00</p>
+            <p id="scoreNumber">0</p>
         </div>
     </div>
     <div id="panelChose">
-        <div id="paper"><img src="./img/icon-paper.svg" alt="paper"></div>
-        <div id="scissore"><img src="./img/icon-scissors.svg" alt="scissors"></div>
-        <div id="rock"><img src="./img/icon-rock.svg" alt="rock"></div>
+        <div id="paper" onclick="game(event)"><img class="imgChoes" src="./img/icon-paper.svg" alt="paper"></div>
+        <div id="scissore" onclick="game(event)"><img class="imgChoes" src="./img/icon-scissors.svg" alt="scissors"></div>
+        <div id="rock" onclick="game(event)"><img class="imgChoes" src="./img/icon-rock.svg" alt="rock"></div>
     </div>
     <div id="resultDiv">
-        <div>
-            <p>YOU PICKED</p>
-            <img src="#" alt="Yourchose" id="you">
+        <div class="choice">
+            <img src="#" alt="your chose" id="you">
+            <img src="#" alt="computer chosee" id="but">
         </div>
-        <div>
-            <p>YOU WIN</p>
-            <button>PLAY AGAIN</button>
-        </div>
-        <div>
-            <p>THE HOUSPICKED</p>
-            <img src="#" alt="HOUSPICKED" id="but">
+        <div id="resultGame">
+            <div>
+                <p id="result">YOU LOSE</p>
+                <button class="play-again">PLAY AGAIN</button>
+            </div>
         </div>
     </div>
     <div id="btn">
