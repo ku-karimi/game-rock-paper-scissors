@@ -30,43 +30,45 @@ btnRules.addEventListener("click" , discription)
 
 // start game whit chose
 
-function win(scour,resultP) {
+function win() {
     resultP.innerHTML = "YOU WIN" ;
     resultP.style.color = "#6E8E59" ;
     scour++ ;
     scoreNumber.innerHTML = scour ;
 }
 
-function lose(resultP) {
+function lose() {
     resultP.innerHTML = "YOU LOSE" ;
-    resultP.style.color = "#780C28" ;
+    resultP.style.color = "#DE3163" ;
 }
 
 function game(event) {
     panelChose.style.display = "none" ;
     resultDiv.style.display = "block" ;
-    let srcImg = event.target.src ;
+    let srcImg = event.target.getAttribute("src");
     imgSelectYou.src = srcImg ;
     let i = Math.floor(Math.random() * imgRuls.length);
     let imgSrcRandom = imgRuls[i];
     imgRandom.src = imgSrcRandom ;
     btnRules.style.display = "none" ;
 
-    if (event.target.src == imgSrcRandom) {
+    if (event.target.getAttribute("src") == imgSrcRandom) {
         resultP.innerHTML = "EQUAL" ;
-        resultP.style.color = "#5C7285"
-    }else if (event.target.src == imgRuls[0] && imgSrcRandom == imgRuls[1]) {
+        resultP.style.color = "#5C7285";
+    }else if (event.target.getAttribute("src") == imgRuls[0] && imgSrcRandom == imgRuls[1]) {
         win() ;
-    }else if (event.target.src == imgRuls[0] && imgSrcRandom == imgRuls[2]) {
+    }else if (event.target.getAttribute("src") == imgRuls[0] && imgSrcRandom == imgRuls[2]) {
         lose() ;
-    }else if (event.target.src == imgRuls[2] && imgSrcRandom == imgRuls[1]) {
+    }else if (event.target.getAttribute("src") == imgRuls[2] && imgSrcRandom == imgRuls[1]) {
         lose() ;
-    }else if (event.target.src == imgRuls[2] && imgSrcRandom == imgRuls[0]) {
+    }else if (event.target.getAttribute("src") == imgRuls[2] && imgSrcRandom == imgRuls[0]) {
         win() ;
-    }else if(event.target.src == imgRuls[1] && imgSrcRandom ==  imgRuls[2]){
+    }else if(event.target.getAttribute("src") == imgRuls[1] && imgSrcRandom ==  imgRuls[2]){
         win() ;
-    }else if(event.target.src == imgRuls[1] && imgSrcRandom ==  imgRuls[0]){
+    }else if(event.target.getAttribute("src") == imgRuls[1] && imgSrcRandom ==  imgRuls[0]){
         lose() ;
+    }else{
+        return ;
     }
 }
 
